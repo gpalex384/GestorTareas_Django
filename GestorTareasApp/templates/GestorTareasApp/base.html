@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+    <!--Hojas de estilo, JS externos e internos, iconos para la barra del título, el título, etiquetas meta...-->
+    <meta charset="iso-8559-1"/>  <!--Estilo de caracteres que van a ir en la página-->
+    <meta name="description" content="Pagina de gestion de tareas"/>
+    <meta name="keywords" content="tareas, gestion, cierre, pendiente"/>
+
+    <title>Listado de tareas</title>
+    <link href="{% static 'GestorTareasApp/gestion.css' %}" rel="stylesheet" /> <!--Es la llamada a rel(a qué llama) en href(ruta donde lo busca)-->
+
+    
+  </head>
+
+  <body>
+    <header id="cabecera">
+      <h1>Lista de tareas</h1>
+      <p>En esta tabla se muestran todas las tareas de todos los proyectos:</p>
+    </header>
+
+    <nav id="navegacionprincipal">
+      <div class="topnav">
+        <a href="{% url 'Tareas_general'%}">Todas las tareas</a>
+        <a href="{% url 'Tareas_pendientes'%}">Tareas pendientes</a>
+        <a href="{% url 'Tareas_realizadas'%}">Tareas realizadas</a>
+        <a href="{% url 'Monitor'%}" style="float:right" class="active">Monitor</a>
+      </div>
+    </nav>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <footer>
+
+    </footer>
+  </body>
+</html>

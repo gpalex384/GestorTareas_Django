@@ -11,5 +11,19 @@ def tareas_general(request):
     d= response[0]
     list_of_keys= d.keys()
     
-    
     return render(request, "tareas_general.html", {"datos": response, "claves": list_of_keys})
+
+
+def tareas_pendientes(request):
+
+    return render(request, "tareas_pendientes.html")
+
+
+def tareas_realizadas(request):
+
+    return render(request, "tareas_realizadas.html")
+
+def monitor(request):
+
+    return render(request, "monitor.html")
+
