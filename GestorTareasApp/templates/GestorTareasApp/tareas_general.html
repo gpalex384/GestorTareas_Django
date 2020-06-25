@@ -3,7 +3,16 @@
 
 {% block content %}
 
+    <aside id="barraLateral" class="dropdown">
+      <button class="dropbtn">Menu</button>
+      <div class="dropdown-content">
+          <a href="#">Nueva tarea</a>
+          <a href="#">Editar tarea</a>
+          <a href="#">Completar tarea</a>
+          <a href="#">Eliminar tarea</a>
+      </div>
 
+    </aside>
     <section id="seccionprincipal">
       N&uacute;mero de tareas totales: {{datos|length}}
       <table id="tabla_tareas">
