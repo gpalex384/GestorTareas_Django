@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends "GestorTareasApp/base.html" %}
+
+{% block content %}
+
+        <h1>Nueva tarea</h1>
+
+        {% if form.errors %}
+            <p style="color: red;">Por favor revisa este campo</p>
+
+        {% endif %}
+
+        <form action='' method="POST">{% csrf_token %}
+
+            <table>
+                {{form.as_table}}
+            </table>
+
+            <input type="submit" value="Enviar">
+
+{% endblock %}
