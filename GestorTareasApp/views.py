@@ -37,11 +37,13 @@ def nueva_tarea(request):
         if miFormulario.is_valid():
             url_post = "http://localhost:8080/products"
             # Almacenamos los datos introducidos en el formulario
-            name = request.POST["nombre_producto"]
-            price = request.POST["precio_producto"]
+            titulo = request.POST["titulo"]
+            descripcion = request.POST["descripcion"]
+            creado_por = request.POST["creado_por"]
+            responsable = request.POST["responsable"]
 
             # Pasamos la información a un diccionario, que identificamos como "data"
-            data = {"name": name, "price": price}
+            data = {"titulo": titulo, "descripcion": descripcion, "creado_por": creado_por, "responsable": responsable}
             rq.post(url_post, json=data)
             return render(request, 'tarea_anyadida.html')
     
