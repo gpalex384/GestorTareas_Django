@@ -1,3 +1,6 @@
+a{
+  color: black;
+}
 
 #cabecera{
     background-color:rgb(12, 95, 12);
@@ -97,7 +100,13 @@
     width: 100%;
     
   }
-  
+  #tabla_tareas a:link{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+  }  
   #tabla_tareas td, #tabla_tareas th {
     border: 1px solid #ddd;
     padding: 8px;
@@ -107,7 +116,7 @@
   
   #tabla_tareas tr:hover {background-color: #ddd;}
   
-  #tabla_tareas td{
+  #tabla_tareas td {
     cursor: pointer;
   }
 

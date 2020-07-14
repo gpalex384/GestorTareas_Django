@@ -24,7 +24,9 @@
         {% for item in datos %}
         <tr>
           {% for value in item.values %}
-          <td>{{value}}</td>
+          <td>
+            <a href="#">{{value}}</a>
+          </td>
           {% endfor %}
         </tr>
         {% endfor %}
